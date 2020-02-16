@@ -1,1 +1,22 @@
-<h1>Body Component</h1>
+<div class="row">
+    <div class="col">
+        <h1>*ngIf</h1>
+        <hr />
+        <div *ngIf="visible" class="card text-white bg-primary mb-3" style="max-width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">{{phrase.author}}</h5>
+                <p class="card-text">
+                    {{phrase.message}}
+                </p>
+            </div>
+        </div>
+        <button (click)="visible = !visible" class="btn btn-outline-primary btn-block">Ver/Ocultar</button>
+    </div>
+    <div class="col">
+        <h1>*ngFor</h1>
+        <hr />
+        <ul class="list-group">
+            <li *ngFor="let person of people; let i = index" class="list-group-item">{{i+1}} - {{person}}</li>
+        </ul>
+    </div>
+</div>

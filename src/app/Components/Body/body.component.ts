@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
 })
 export class BodyComponent {
 
+    visible = true;
+
+    phrase: any = {
+        message: 'Un gran poder conlleva una gran responsabilidad',
+        author: 'Ben Parker'
+    };
+
+    people: string[] = ['IronMan', 'Hulk', 'Thor'];
 }
